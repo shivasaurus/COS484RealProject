@@ -3,7 +3,7 @@ from torch.nn import functional as F
 import torch.nn as nn
 import torch
 from utils.utils import clean_str
-from bias.parameters import MASK_TOKEN, UNK_TOKEN
+from parameters import MASK_TOKEN, UNK_TOKEN
 
 class LSTMModel(nn.Module):
     def __init__(self, hidden_dim, lstm_layer, dropout, labelnum, word2idx, glove_embedding_matrix, maxlen=200, input_type=CLAIM_ONLY):
